@@ -40,7 +40,6 @@ public class UserRatingJobService : IUserRatingJobService
         {
             var daysDelayed = (borrow.DueDate - DateTime.UtcNow).Days;
 
-            Console.WriteLine(daysDelayed);
             var user = borrow.User;
             if (daysDelayed is OneDayLate or OneWeekLate or TwoWeeksLate or OneMonthLate)
             {
